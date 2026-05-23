@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M9 Automóveis | Veículos Premium em São Carlos - SP</title>
+    <meta
+      name="description"
+      content="Veículos selecionados, atendimento premium e estoque atualizado diariamente em São Carlos - SP. Fale com a M9 Automóveis e encontre seu próximo carro."
+    />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="M9 Automóveis | Veículos Premium em São Carlos - SP" />
+    <meta
+      property="og:description"
+      content="Veículos selecionados, atendimento premium e estoque atualizado diariamente em São Carlos - SP. Fale com a M9 Automóveis e encontre seu próximo carro."
+    />
+    <meta property="og:type" content="website" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              m9black: "#050505",
+              m9panel: "#111111",
+              m9soft: "#191714",
+              m9gold: "#d7a84d",
+              m9gold2: "#f2d27c",
+              m9muted: "#b8b0a3",
+            },
+            boxShadow: {
+              gold: "0 24px 90px rgba(215, 168, 77, .18)",
+              premium: "0 28px 90px rgba(0, 0, 0, .55)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background:
+          radial-gradient(circle at 20% 0%, rgba(215, 168, 77, 0.14), transparent 28rem),
+          radial-gradient(circle at 88% 18%, rgba(242, 210, 124, 0.08), transparent 26rem),
+          #050505;
+      }
+
+      .font-display {
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .metal {
+        background: linear-gradient(135deg, #f8df92 0%, #d7a84d 45%, #8d6528 100%);
+      }
+
+      .text-metal {
+        background: linear-gradient(135deg, #fff2bd 0%, #d7a84d 52%, #8d6528 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-image {
+        background-image:
+          linear-gradient(90deg, rgba(5, 5, 5, 0.97) 0%, rgba(5, 5, 5, 0.78) 48%, rgba(5, 5, 5, 0.38) 100%),
+          url("images/hero-c3.jpeg");
+      }
+
+      .image-fallback {
+        background:
+          linear-gradient(135deg, rgba(215, 168, 77, .15), rgba(255, 255, 255, .04)),
+          #141414;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 700ms ease, transform 700ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .carousel-dot {
+        width: 1.25rem;
+        height: 0.375rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.35);
+        transition: background 180ms ease, width 180ms ease;
+      }
+
+      .carousel-dot.is-active {
+        width: 1.75rem;
+        background: #f2d27c;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden bg-m9black text-white antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-m9black/75 backdrop-blur-xl transition-all" data-header>
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#inicio" class="flex items-center gap-3" aria-label="M9 Automóveis">
+          <span class="grid h-12 w-12 place-items-center rounded-md metal text-lg font-black text-black shadow-gold">M9</span>
+          <span>
+            <span class="block text-sm font-bold uppercase tracking-[0.18em] text-m9gold2">Automóveis</span>
+            <span class="block text-xs text-m9muted">São Carlos - SP</span>
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium text-m9muted lg:flex">
+          <a class="transition hover:text-white" href="#inicio">Início</a>
+          <a class="transition hover:text-white" href="#diferenciais">Diferenciais</a>
+          <a class="transition hover:text-white" href="#destaques">Destaques</a>
+          <a class="transition hover:text-white" href="#sobre">Sobre</a>
+          <a class="transition hover:text-white" href="#contato">Contato</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <a
+            href="https://wa.me/5516997539327"
+            target="_blank"
+            rel="noopener"
+            class="rounded-md metal px-5 py-3 text-sm font-black text-black shadow-gold transition hover:-translate-y-0.5"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <button
+          class="grid h-11 w-11 place-items-center rounded-md border border-m9gold/30 bg-white/5 lg:hidden"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <span class="relative h-4 w-5">
+            <span class="absolute left-0 top-0 h-0.5 w-5 bg-m9gold2 transition" data-menu-line></span>
+            <span class="absolute bottom-0 left-0 h-0.5 w-5 bg-m9gold2 transition" data-menu-line></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="hidden border-t border-white/10 bg-m9black/95 px-4 py-4 lg:hidden" data-mobile-menu>
+        <nav class="grid gap-2 text-base font-medium text-m9muted">
+          <a class="rounded-md px-3 py-3 hover:bg-white/5 hover:text-white" href="#inicio">Início</a>
+          <a class="rounded-md px-3 py-3 hover:bg-white/5 hover:text-white" href="#diferenciais">Diferenciais</a>
+          <a class="rounded-md px-3 py-3 hover:bg-white/5 hover:text-white" href="#destaques">Destaques</a>
+          <a class="rounded-md px-3 py-3 hover:bg-white/5 hover:text-white" href="#sobre">Sobre</a>
+          <a class="rounded-md px-3 py-3 hover:bg-white/5 hover:text-white" href="#contato">Contato</a>
+          <a class="mt-2 rounded-md metal px-4 py-3 text-center font-black text-black" href="https://wa.me/5516997539327" target="_blank" rel="noopener">
+            Falar no WhatsApp
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="relative min-h-screen overflow-hidden pt-20">
+        <div class="hero-image absolute inset-0 bg-cover bg-center lg:bg-right"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-m9black via-m9black/20 to-transparent"></div>
+        <div class="absolute left-1/2 top-24 h-48 w-48 -translate-x-1/2 rounded-full bg-m9gold/20 blur-3xl"></div>
+
+        <div class="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center px-4 py-16 sm:px-6 lg:px-8">
+          <div class="max-w-4xl reveal">
+            <span class="mb-5 inline-flex items-center gap-2 rounded-full border border-m9gold/40 bg-black/45 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-m9gold2 shadow-gold">
+              <span class="h-2 w-2 rounded-full bg-m9gold2"></span>
+              Estoque atualizado diariamente
+            </span>
+            <h1 class="font-display text-5xl leading-[0.94] text-white sm:text-6xl lg:text-8xl">
+              Seu próximo carro começa com uma <span class="text-metal">escolha segura.</span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
+              Veículos selecionados, atendimento premium e condições facilitadas para você conquistar seu próximo carro com confiança em São Carlos.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#destaques" class="rounded-md metal px-6 py-4 text-center font-black text-black shadow-gold transition hover:-translate-y-1">
+                Ver veículos em destaque
+              </a>
+              <a href="https://wa.me/5516997539327" target="_blank" rel="noopener" class="rounded-md border border-m9gold/40 bg-white/5 px-6 py-4 text-center font-bold text-m9gold2 transition hover:-translate-y-1 hover:bg-m9gold/10">
+                Falar no WhatsApp
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-m9muted">Atendimento direto, negociação transparente e suporte em todas as etapas.</p>
+
+            <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div class="rounded-lg border border-white/10 bg-black/45 p-4 backdrop-blur">
+                <strong class="block text-xl text-m9gold2">+10</strong>
+                <span class="text-xs text-m9muted">anos de mercado</span>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/45 p-4 backdrop-blur">
+                <strong class="block text-xl text-m9gold2">100%</strong>
+                <span class="text-xs text-m9muted">procedência garantida</span>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/45 p-4 backdrop-blur">
+                <strong class="block text-xl text-m9gold2">Direto</strong>
+                <span class="text-xs text-m9muted">atendimento direto</span>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-black/45 p-4 backdrop-blur">
+                <strong class="block text-xl text-m9gold2">Diário</strong>
+                <span class="text-xs text-m9muted">estoque atualizado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="diferenciais" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="mb-10 max-w-3xl reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Diferenciais</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Uma compra premium precisa ser clara, segura e bem conduzida.</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-6 shadow-premium transition hover:-translate-y-1 hover:border-m9gold/50">
+            <span class="text-4xl font-black text-m9gold2">01</span>
+            <h3 class="mt-8 text-xl font-bold">Procedência verificada</h3>
+            <p class="mt-3 text-sm leading-7 text-m9muted">Veículos selecionados com atenção à qualidade e histórico.</p>
+          </article>
+          <article class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-6 shadow-premium transition hover:-translate-y-1 hover:border-m9gold/50">
+            <span class="text-4xl font-black text-m9gold2">02</span>
+            <h3 class="mt-8 text-xl font-bold">Atendimento consultivo</h3>
+            <p class="mt-3 text-sm leading-7 text-m9muted">Acompanhamento próximo para encontrar a melhor opção para você.</p>
+          </article>
+          <article class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-6 shadow-premium transition hover:-translate-y-1 hover:border-m9gold/50">
+            <span class="text-4xl font-black text-m9gold2">03</span>
+            <h3 class="mt-8 text-xl font-bold">Financiamento facilitado</h3>
+            <p class="mt-3 text-sm leading-7 text-m9muted">Simulação rápida e condições pensadas para sua realidade.</p>
+          </article>
+          <article class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-6 shadow-premium transition hover:-translate-y-1 hover:border-m9gold/50">
+            <span class="text-4xl font-black text-m9gold2">04</span>
+            <h3 class="mt-8 text-xl font-bold">Estoque atualizado</h3>
+            <p class="mt-3 text-sm leading-7 text-m9muted">Consulte diariamente as opções disponíveis na loja.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="destaques" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="mb-12 max-w-4xl reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Seleção M9</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-6xl">Veículos em destaque</h2>
+          <p class="mt-5 text-lg leading-8 text-m9muted">
+            Algumas oportunidades selecionadas pela equipe M9. Para consultar todas as opções disponíveis, acesse o estoque completo atualizado.
+          </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="group reveal overflow-hidden rounded-lg border border-m9gold/20 bg-m9panel shadow-premium transition hover:-translate-y-2 hover:border-m9gold/60 hover:shadow-gold">
+            <div
+              class="image-fallback vehicle-carousel relative aspect-[4/3] overflow-hidden"
+              data-carousel
+              data-images="images/c3-1.jpeg|images/c3-2.jpeg|images/c3-7.jpeg|images/c3-3.jpeg|images/c3-4.jpeg|images/c3-5.jpeg|images/c3-6.jpeg"
+              data-alt="Citroën C3 Exclusive Teto Zenith"
+            >
+              <img src="images/c3-1.jpeg" alt="Citroën C3 Exclusive Teto Zenith" loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" data-carousel-image />
+              <span class="absolute left-4 top-4 rounded bg-m9gold px-3 py-2 text-xs font-black text-black">PREÇO CAMPEÃO</span>
+              <button type="button" class="absolute left-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/55 text-lg font-black text-white backdrop-blur transition hover:border-m9gold/70 hover:text-m9gold2" aria-label="Foto anterior" data-carousel-prev>‹</button>
+              <button type="button" class="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/55 text-lg font-black text-white backdrop-blur transition hover:border-m9gold/70 hover:text-m9gold2" aria-label="Próxima foto" data-carousel-next>›</button>
+              <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" data-carousel-dots></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold">Citroën C3 Exclusive Teto Zenith</h3>
+              <div class="mt-5 grid gap-3 text-sm">
+                <div class="flex justify-between border-b border-white/10 pb-3 text-m9muted"><span>Ano</span><strong class="text-white">2015</strong></div>
+                <div class="flex justify-between border-b border-white/10 pb-3 text-m9muted"><span>KM</span><strong class="text-white">117.000</strong></div>
+                <div class="flex justify-between text-m9muted"><span>Combustível</span><strong class="text-white">Flex</strong></div>
+              </div>
+              <a href="https://wa.me/5516997539327?text=Olá,%20tenho%20interesse%20no%20Citroën%20C3%20Exclusive%20Teto%20Zenith%202015%20da%20M9%20Automóveis" target="_blank" rel="noopener" class="mt-6 flex rounded-md metal px-5 py-3 text-center font-black text-black transition hover:-translate-y-1">
+                Tenho interesse
+              </a>
+            </div>
+          </article>
+
+          <article class="group reveal overflow-hidden rounded-lg border border-m9gold/20 bg-m9panel shadow-premium transition hover:-translate-y-2 hover:border-m9gold/60 hover:shadow-gold">
+            <div
+              class="image-fallback vehicle-carousel relative aspect-[4/3] overflow-hidden"
+              data-carousel
+              data-images="images/bmw-320-i-1.jpeg|images/bmw-320-i-2.jpeg|images/bmw-320-i-3.jpeg|images/bmw-320-i-4.jpeg|images/bmw-320-i-5.jpeg|images/bmw-320-i-6.jpeg|images/bmw-320-i-7.jpeg"
+              data-alt="BMW 320i M Sport"
+            >
+              <img src="images/bmw-320-i-1.jpeg" alt="BMW 320i M Sport" loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" data-carousel-image />
+              <span class="absolute left-4 top-4 rounded bg-m9gold px-3 py-2 text-xs font-black text-black">PREMIUM</span>
+              <button type="button" class="absolute left-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/55 text-lg font-black text-white backdrop-blur transition hover:border-m9gold/70 hover:text-m9gold2" aria-label="Foto anterior" data-carousel-prev>‹</button>
+              <button type="button" class="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/55 text-lg font-black text-white backdrop-blur transition hover:border-m9gold/70 hover:text-m9gold2" aria-label="Próxima foto" data-carousel-next>›</button>
+              <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" data-carousel-dots></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold">BMW 320i M Sport</h3>
+              <div class="mt-5 grid gap-3 text-sm">
+                <div class="flex justify-between border-b border-white/10 pb-3 text-m9muted"><span>Ano</span><strong class="text-white">2025</strong></div>
+                <div class="flex justify-between border-b border-white/10 pb-3 text-m9muted"><span>KM</span><strong class="text-white">22.007</strong></div>
+                <div class="flex justify-between text-m9muted"><span>Combustível</span><strong class="text-white">Flex</strong></div>
+              </div>
+              <a href="https://wa.me/5516997539327?text=Olá,%20tenho%20interesse%20na%20BMW%20320i%20M%20Sport%202025%20da%20M9%20Automóveis" target="_blank" rel="noopener" class="mt-6 flex rounded-md metal px-5 py-3 text-center font-black text-black transition hover:-translate-y-1">
+                Tenho interesse
+              </a>
+            </div>
+          </article>
+
+          <article class="group reveal overflow-hidden rounded-lg border border-m9gold/20 bg-m9panel shadow-premium transition hover:-translate-y-2 hover:border-m9gold/60 hover:shadow-gold">
+            <div
+              class="image-fallback vehicle-carousel relative aspect-[4/3] overflow-hidden"
+              data-carousel
+              data-images="images/civic-2.jpeg|images/civic-1.jpeg|images/civic-3.jpeg|images/civic-4.jpeg|images/civic-5.jpeg|images/civic-6.jpeg|images/civic-7.jpeg"
+              data-alt="Honda Civic 2.0 EXL Automático"
+            >
+              <img src="images/civic-2.jpeg" alt="Honda Civic 2.0 EXL Automático" loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" data-carousel-image />
+              <span class="absolute left-4 top-4 rounded bg-m9gold px-3 py-2 text-xs font-black text-black">MAIS PROCURADO</span>
+              <button type="button" class="absolute left-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/55 text-lg font-black text-white backdrop-blur transition hover:border-m9gold/70 hover:text-m9gold2" aria-label="Foto anterior" data-carousel-prev>‹</button>
+              <button type="button" class="absolute right-3 top-1/2 grid h-9 w-9 -translate-y-1/2 place-items-center rounded-full border border-white/15 bg-black/55 text-lg font-black text-white backdrop-blur transition hover:border-m9gold/70 hover:text-m9gold2" aria-label="Próxima foto" data-carousel-next>›</button>
+              <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5" data-carousel-dots></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold">Honda Civic 2.0 EXL Automático</h3>
+              <div class="mt-5 grid gap-3 text-sm">
+                <div class="flex justify-between border-b border-white/10 pb-3 text-m9muted"><span>Ano</span><strong class="text-white">2020</strong></div>
+                <div class="flex justify-between border-b border-white/10 pb-3 text-m9muted"><span>KM</span><strong class="text-white">89.570</strong></div>
+                <div class="flex justify-between text-m9muted"><span>Combustível</span><strong class="text-white">Flex</strong></div>
+              </div>
+              <a href="https://wa.me/5516997539327?text=Olá,%20tenho%20interesse%20no%20Honda%20Civic%202.0%20EXL%20Automático%202020%20da%20M9%20Automóveis" target="_blank" rel="noopener" class="mt-6 flex rounded-md metal px-5 py-3 text-center font-black text-black transition hover:-translate-y-1">
+                Tenho interesse
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="reveal mt-10 overflow-hidden rounded-xl border border-m9gold/30 bg-gradient-to-br from-m9gold/20 via-m9soft to-black p-6 shadow-gold sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div class="max-w-2xl">
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Estoque completo</p>
+            <h2 class="mt-3 font-display text-3xl leading-tight sm:text-5xl">Veja o estoque completo atualizado diariamente.</h2>
+            <p class="mt-4 text-base leading-8 text-zinc-300">
+              A M9 Automóveis mantém o estoque atualizado para você consultar as melhores oportunidades disponíveis agora.
+            </p>
+          </div>
+          <div class="mt-8 grid gap-3 sm:flex lg:mt-0">
+            <a href="https://limaautos.com.br/" target="_blank" rel="noopener" class="rounded-md metal px-6 py-4 text-center font-black text-black transition hover:-translate-y-1">Ver estoque completo</a>
+            <a href="https://wa.me/5516997539327?text=Olá,%20quero%20receber%20atendimento%20sobre%20o%20estoque%20da%20M9%20Automóveis" target="_blank" rel="noopener" class="rounded-md border border-m9gold/40 bg-black/30 px-6 py-4 text-center font-bold text-m9gold2 transition hover:-translate-y-1 hover:bg-m9gold/10">
+              Receber atendimento no WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_.8fr] lg:px-8 lg:py-28">
+        <div class="reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Sobre</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-6xl">Mais do que vender carros. Entregamos confiança.</h2>
+          <p class="mt-6 text-lg leading-8 text-m9muted">
+            A M9 Automóveis atua com atendimento próximo, transparência e veículos selecionados para tornar sua compra mais segura. Nosso compromisso é ajudar cada cliente a encontrar o carro ideal com clareza, confiança e suporte em todas as etapas.
+          </p>
+        </div>
+        <div class="reveal image-fallback overflow-hidden rounded-xl border border-m9gold/20 shadow-premium">
+          <img src="images/hero-c3.jpeg" alt="Veículo selecionado pela M9 Automóveis" loading="lazy" class="h-full min-h-[360px] w-full object-cover" />
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="mb-10 max-w-3xl reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Como funciona</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Da escolha ao fechamento com segurança.</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="reveal rounded-lg border border-white/10 bg-white/[0.035] p-7">
+            <span class="text-sm font-black uppercase tracking-[0.2em] text-m9gold2">Passo 1</span>
+            <h3 class="mt-5 text-2xl font-bold">Escolha seu veículo</h3>
+            <p class="mt-3 leading-7 text-m9muted">Veja os destaques ou acesse o estoque completo atualizado.</p>
+          </article>
+          <article class="reveal rounded-lg border border-white/10 bg-white/[0.035] p-7">
+            <span class="text-sm font-black uppercase tracking-[0.2em] text-m9gold2">Passo 2</span>
+            <h3 class="mt-5 text-2xl font-bold">Fale com a equipe</h3>
+            <p class="mt-3 leading-7 text-m9muted">Receba atendimento direto pelo WhatsApp para tirar dúvidas e simular condições.</p>
+          </article>
+          <article class="reveal rounded-lg border border-white/10 bg-white/[0.035] p-7">
+            <span class="text-sm font-black uppercase tracking-[0.2em] text-m9gold2">Passo 3</span>
+            <h3 class="mt-5 text-2xl font-bold">Feche com segurança</h3>
+            <p class="mt-3 leading-7 text-m9muted">Conte com suporte na negociação, financiamento e entrega.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="mb-10 max-w-3xl reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Depoimentos</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Clientes que escolheram comprar com confiança.</h2>
+        </div>
+        <div class="grid gap-5 lg:grid-cols-3">
+          <blockquote class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-7">
+            <div class="text-m9gold2">★★★★★</div>
+            <p class="mt-5 leading-8 text-zinc-300">Atendimento muito claro e rápido. A equipe passou segurança desde o primeiro contato.</p>
+            <cite class="mt-6 block not-italic text-sm font-bold text-m9gold2">Cliente M9</cite>
+          </blockquote>
+          <blockquote class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-7">
+            <div class="text-m9gold2">★★★★★</div>
+            <p class="mt-5 leading-8 text-zinc-300">Gostei da transparência na negociação e do cuidado na apresentação dos veículos.</p>
+            <cite class="mt-6 block not-italic text-sm font-bold text-m9gold2">Cliente M9</cite>
+          </blockquote>
+          <blockquote class="reveal rounded-lg border border-m9gold/20 bg-white/[0.035] p-7">
+            <div class="text-m9gold2">★★★★★</div>
+            <p class="mt-5 leading-8 text-zinc-300">Processo simples, atendimento próximo e suporte até a entrega. Recomendo.</p>
+            <cite class="mt-6 block not-italic text-sm font-bold text-m9gold2">Cliente M9</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="contato" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="reveal rounded-xl border border-m9gold/30 bg-gradient-to-br from-white/[0.06] via-m9soft to-black p-6 shadow-gold sm:p-10 lg:grid lg:grid-cols-[1fr_.8fr] lg:gap-10">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-m9gold2">Contato</p>
+            <h2 class="mt-3 font-display text-4xl leading-tight sm:text-6xl">Fale com a M9 Automóveis.</h2>
+            <p class="mt-5 text-lg leading-8 text-m9muted">Receba atendimento direto para consultar veículos, condições e disponibilidade.</p>
+            <div class="mt-8 grid gap-3 sm:flex">
+              <a href="https://wa.me/5516997539327" target="_blank" rel="noopener" class="rounded-md metal px-6 py-4 text-center font-black text-black transition hover:-translate-y-1">WhatsApp</a>
+              <a href="https://www.instagram.com/mateushm9/" target="_blank" rel="noopener" class="rounded-md border border-m9gold/40 bg-black/30 px-6 py-4 text-center font-bold text-m9gold2 transition hover:-translate-y-1 hover:bg-m9gold/10">Instagram</a>
+            </div>
+          </div>
+          <div class="mt-8 grid gap-4 text-sm lg:mt-0">
+            <a class="rounded-lg border border-white/10 bg-black/30 p-5 transition hover:border-m9gold/50" href="https://wa.me/5516997539327" target="_blank" rel="noopener">
+              <span class="block text-m9muted">WhatsApp</span>
+              <strong class="mt-1 block text-lg text-white">(16) 99753-9327</strong>
+            </a>
+            <a class="rounded-lg border border-white/10 bg-black/30 p-5 transition hover:border-m9gold/50" href="https://www.google.com/maps/search/?api=1&query=Av.%20Henrique%20Gregori%2C%20818%20-%20Vila%20Boa%20Vista%201%2C%20S%C3%A3o%20Carlos%20-%20SP" target="_blank" rel="noopener">
+              <span class="block text-m9muted">Endereço</span>
+              <strong class="mt-1 block text-white">Av. Henrique Gregori, 818 - Vila Boa Vista 1, São Carlos - SP</strong>
+            </a>
+            <div class="rounded-lg border border-white/10 bg-black/30 p-5">
+              <span class="block text-m9muted">Horário</span>
+              <strong class="mt-1 block text-white">Segunda à Sexta • 08h às 18h</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-black px-4 py-8 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-m9muted sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 M9 Automóveis • São Carlos - SP</p>
+        <a href="https://www.instagram.com/sougabriel.henrique/" target="_blank" rel="noopener" class="font-bold text-m9gold2 transition hover:text-white">
+          Desenvolvido por Gabriel Henrique
+        </a>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/5516997539327"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+      class="fixed bottom-4 right-4 z-50 rounded-md metal px-5 py-4 text-sm font-black text-black shadow-gold transition hover:-translate-y-1"
+    >
+      WhatsApp
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
